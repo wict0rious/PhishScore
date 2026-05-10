@@ -6,8 +6,6 @@ Built from a survey of 27 infosec/cybersecurity practitioners with extensive exp
 
 ## Quick start
 
-> Examples below use `python3` / `pip3`, which is standard on macOS and Linux. On Windows the same commands are usually `python` / `pip`.
-
 ```bash
 git clone <url> phishscore
 cd phishscore

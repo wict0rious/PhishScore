@@ -9,8 +9,8 @@ Built from a survey of 27 infosec/cybersecurity practitioners with extensive exp
 ```bash
 git clone <url> phishscore
 cd phishscore
-python3 -m venv .venv
-. .venv/bin/activate          # Windows: .venv\Scripts\activate
+python3 -m venv .ps
+. .ps/bin/activate
 pip3 install -e .
 ```
 
@@ -22,7 +22,7 @@ Train the model on first run and launch the interactive menu:
 phishscore
 ```
 
-Or skip the menu and request a single assessment:
+You can also request a single assessment:
 
 ```bash
 phishscore \
@@ -41,7 +41,7 @@ Useful flags:
 | --- | --- |
 | `--model {pure,enhanced}` | `pure` uses only the survey scores, `enhanced` adds taxonomy blending and context modifiers |
 | `--assessment {default,offensive,defensive}` | Output style, suited for different professional perspectives |
-| `--modifiers KEYS` | Comma-separated context modifiers (`technical`, `remote`, `deadline`, ...) |
+| `--modifiers KEYS` | Comma-separated context modifiers (`technical`, `remote`, `deadline`, etc. |
 | `--report` | Also write JSON, TXT and HTML copies into `output/reports/` |
 | `--retrain` | Discard any cached model and retrain from the CSVs |
 
@@ -50,14 +50,14 @@ Useful flags:
 For a given target the model:
 
 1. Looks up the empirical net susceptibility of the target's department from the data. For non-surveyed departments it computes a weighted blend of surveyed ones, plus an optional offset (e.g. a `Cybersecurity/InfoSec` role inherits `IT helpdesk`'s base score and then receives a strong protective offset).
-2. Applies an industry modifier and any active context modifiers (`technical`, `remote`, `deadline`, `leadership`, ...).
+2. Applies an industry modifier and any active context modifiers (`technical`, `remote`, `deadline`, `leadership`, etc.).
 3. Re-ranks the global survey recommendations (psychological levers, pretext design factors, OSINT sources, optimal timing, persona approach, credibility factors, protective controls) using archetype and modifier-specific boost factors so that the output is tailored to the target rather than identical for every query.
 
-The final 0-100 score is interpreted as **relative susceptibility within typical organizational roles**, not as a per-attempt success probability.
+The final 0-100 score is interpreted as **relative susceptibility within typical organizational roles**, NOT as a per-attempt success probability for a given individual.
 
 ## Auxiliary scripts
 
-One-off analysis and data-validation utilities are in `scripts/`. Run them from the project root, e.g. `python3 scripts/run_analysis.py`. See each file's docstring for details.
+One-off analysis and data validation scripte are in `scripts/`. Run them from the project root, e.g. `python3 scripts/run_analysis.py`. These can be run to get a clean model, or if more responses are collected.
 
 ## About the data
 

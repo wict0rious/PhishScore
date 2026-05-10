@@ -59,13 +59,17 @@ The CSVs in `data/` are the public, redacted versions of the original Qualtrics 
 
 ## Auxiliary scripts
 
-One-off analysis and data validation scripte are in `scripts/`. Run them from the project root, e.g. `python3 scripts/run_analysis.py`. These can be run to get a clean model, or if more responses are collected.
+One-off analysis and data validation scripts are in `scripts/`. Run them from the project root, e.g. `python3 scripts/run_analysis.py`. These can be run to get a clean model, or if more responses are collected and need to be analyzed.
 
 ## Disclaimers
 
-Human susceptibility is not a fixed quantity. It shifts with cognitive state, emotional condition, workload, personal circumstances, factors that change hour to hour. It is **very important** to remember that the output susceptibility score applies to an employee role only. It does not assess a specific individual's character or competence.
+Human susceptibility is not a fixed quantity. It shifts with cognitive state, emotional condition, workload, personal circumstances, and other factors that change hour to hour. It is **very important** to remember that the output susceptibility score applies to an employee role only. It does not assess a specific individual's character or competence.
 
 These scores should inform role-level training priorities, general policy and process decisions, and resource allocation for security teams. They should **NEVER** be used for judgments about individual employees or punishment. Please reconsider your priorities in life if that is not how you think. 
+
+## Acknowledgements
+
+This work was done for a master's thesis, and made possible with the help of 27 professionals. The full thesis text can be found here: [Understanding Phishing Susceptibility Through Expert Consensus Using Digital Marketing Parallels and a Machine Learning-Based Implementation](https://cornerstone.lib.mnsu.edu/etds/1587/)
 
 ## License
 

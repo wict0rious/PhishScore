@@ -55,14 +55,18 @@ For a given target the model:
 
 The final 0-100 score is interpreted as **relative susceptibility within typical organizational roles**, NOT as a per-attempt success probability for a given individual.
 
+The CSVs in `data/` are the public, redacted versions of the original Qualtrics export. Free-text responses (the `*_TEXT` "Other" fields and the open-ended questions Q21-Q23) and Qualtrics metadata such as timestamps, distribution channel, user language, and the consent block have been stripped. Response IDs have been replaced with sequential anonymous identifiers (`R001`, `R002`, ...).
+
 ## Auxiliary scripts
 
 One-off analysis and data validation scripte are in `scripts/`. Run them from the project root, e.g. `python3 scripts/run_analysis.py`. These can be run to get a clean model, or if more responses are collected.
 
-## About the data
+## Disclaimers
 
-The CSVs in `data/` are the public, redacted versions of the original Qualtrics export. Free-text responses (the `*_TEXT` "Other" fields and the open-ended questions Q21-Q23) and Qualtrics metadata such as timestamps, distribution channel, user language, and the consent block have been stripped. Response IDs have been replaced with sequential anonymous identifiers (`R001`, `R002`, ...).
+Human susceptibility is not a fixed quantity. It shifts with cognitive state, emotional condition, workload, personal circumstances, factors that change hour to hour. It is **very important** to remember that the output susceptibility score applies to an employee role only. It does not assess a specific individual's character or competence.
+
+These scores should inform role-level training priorities, general policy and process decisions, and resource allocation for security teams. They should **NEVER** be used for judgments about individual employees or punishment. Please reconsider your priorities in life if that is not how you think. 
 
 ## License
 
-MIT - see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).

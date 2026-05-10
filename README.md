@@ -7,7 +7,7 @@ Built from a survey of 27 infosec/cybersecurity practitioners with extensive exp
 ## Quick start
 
 ```bash
-git clone <url> phishscore
+git clone https://github.com/wict0rious/PhishScore phishscore
 cd phishscore
 python3 -m venv .ps
 . .ps/bin/activate
